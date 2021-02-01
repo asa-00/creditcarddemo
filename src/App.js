@@ -1,12 +1,11 @@
-import './App.css';
+import CreditCard from './components/card/CreditCard'
+import './App.scss';
 
 function App() {
   return (
     <div className="App">
       <div className="container">
-        <div className="card">
-          Credit card
-        </div>
+        <CreditCard />
         <div className="form-container">
           Form
         </div>
