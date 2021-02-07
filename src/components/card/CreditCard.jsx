@@ -1,4 +1,3 @@
-import React from 'react'
 import './CreditCard.scss'
 import chip from '../../assets/chip.png'
 import visa from '../../assets/visa.png'

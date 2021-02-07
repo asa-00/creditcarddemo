@@ -1,4 +1,5 @@
 import CreditCard from './components/card/CreditCard'
+import Form from './components/form/Form'
 import './App.scss';
 
 function App() {
@@ -7,7 +8,7 @@ function App() {
       <div className="container">
         <CreditCard />
         <div className="form-container">
-          Form
+          <Form />
         </div>
       </div>
     </div>
