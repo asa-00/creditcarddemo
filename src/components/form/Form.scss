@@ -46,7 +46,16 @@
   }
   .form-cvv-input {
     height: 39px !important;
+    
+  }
+  .form-input-column-cvv {
     margin-right: 0 !important;
+  }
+  .form-input-group-column-date-year {
+    margin-left: -15px;
+    .form-year-input-label{
+      color: transparent;
+    }
   }
   .row {
     display: flex;
@@ -60,9 +69,9 @@
   .middle {
     padding-top: 20px;
   }
-  @media screen and (max-width: 600px) {
-    .column {
-      width: 100%;
-    }
+
+  .form-cvv-input {
+    height: 39px !important;
+    margin-right: 0 !important;
   }
 }

@@ -1,4 +1,9 @@
 .card {
+  .focused {
+    outline-color: darkgray;
+    outline-style: solid;
+    outline-width: 1px;
+  }
   display: flex;
   max-width: 400px;
   height: 230px;
@@ -10,6 +15,10 @@
   perspective: 1000px;
   transition: 0.3s;
   border-radius: 15px;
+
+  @media screen and (max-width: 480px) {
+    font-size: small;
+  }
 
   .card-img-container {
     padding: 25px;
@@ -120,27 +129,28 @@
     }
   }
   
-  &:hover .card-inner {
+  .flipped .card-inner {
     transform: rotateY(180deg);
   }
 
   .credit-card-number {
     display: flex;
-    margin: 30px;
-    padding-top: 20px;
-    height: 60px;
+    margin: 20px;
+    margin-top: 45px;
+    text-align: center;
+    justify-content: center;
 
     .credit-card-number-label {
       font-weight: 500;
       font-family: 'Lato';
       color: #fff;
       font-size: 30px;
-      letter-spacing: 2px;
+      letter-spacing: 1px;
+      padding: 10px;
     }
   }
   .card-holder-expiration {
     display: flex;
-    margin-top: -11px;
     .card-holder {
       width: 100%;
     }
