@@ -1,3 +1,4 @@
+$font-family: 'Lato';
 .card {
   .focused {
     outline-color: darkgray;
@@ -16,32 +17,20 @@
   transition: 0.3s;
   border-radius: 15px;
 
-  @media screen and (max-width: 480px) {
-    font-size: small;
-  }
-
   .card-img-container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 50px;
+    gap: 0;
     padding: 25px;
 
     .chip {
       width: 60px;
       float: left;
-      @media screen and (max-width: 480px) {
-        width: 50px;
-      }
-      @media screen and (max-width: 360px) {
-        width: 40px;
-      }
     }
     .type {
       width: 60px;
       float: right;
-      @media screen and (max-width: 480px) {
-        width: 50px;
-      }
-      @media screen and (max-width: 360px) {
-        width: 40px;
-      }
     }
   }
 
@@ -100,7 +89,7 @@
         }
         .card-cvv-label{
           font-weight: 500;
-          font-family: 'Lato';
+          font-family: $font-family;
           color: #fff;
           font-size: 14px;
           text-transform: capitalize;
@@ -134,30 +123,41 @@
   }
 
   .credit-card-number {
-    display: flex;
-    margin: 20px;
-    margin-top: 45px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 75px;
     text-align: center;
     justify-content: center;
 
     .credit-card-number-label {
       font-weight: 500;
-      font-family: 'Lato';
+      font-family: $font-family;
       color: #fff;
-      font-size: 30px;
+      font-size: 2em;
       letter-spacing: 1px;
       padding: 10px;
     }
   }
   .card-holder-expiration {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 55px;
     .card-holder {
-      width: 100%;
+      display: grid;
+      grid-template-columns: auto;
+      justify-content: left;
+      text-align: left;
+    }
+    .card-expiration {
+      display: grid;
+      grid-template-columns: auto;
+      justify-content: left;
+      text-align: left;
     }
     .card-holder-label {
       float: left;
       font-weight: 500;
-      font-family: 'Lato';
+      font-family: $font-family;
       color: #fff;
       font-size: 14px;
       padding: 0px 35px;
@@ -167,7 +167,7 @@
     }
     .card-holder-name {
       font-weight: 500;
-      font-family: 'Lato';
+      font-family: $font-family;
       letter-spacing: 1px;
       color: #fff;
       font-size: 18px;
@@ -178,7 +178,7 @@
     .card-expiration-label {
       float: left;
       font-weight: 500;
-      font-family: 'Lato';
+      font-family: $font-family;
       color: #fff;
       font-size: 14px;
       padding: 0px 35px;
@@ -188,7 +188,7 @@
     }
     .card-expiration-date {
       font-weight: 500;
-      font-family: 'Lato';
+      font-family: $font-family;
       letter-spacing: 1px;
       color: #fff;
       font-size: 18px;
@@ -206,6 +206,38 @@
       pointer-events: none;
       overflow: hidden;
       border: 2px solid rgba(255, 255, 255, 0.65);
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .credit-card-number-label {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  font-size: small;
+
+  .card-img-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 0;
+    padding: 25px;
+
+    .chip {
+      width: 50px;
+      float: left;
+      @media screen and (max-width: 360px) {
+        width: 40px;
+      }
+    }
+    .type {
+      width: 50px;
+      float: right;
+      @media screen and (max-width: 360px) {
+        width: 40px;
+      }
     }
   }
 }

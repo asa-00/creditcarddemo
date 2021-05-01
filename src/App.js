@@ -43,8 +43,9 @@ function App() {
     setFocusedElment(refByName);
   };
 
-  const handleInputChange = () => {
-    
+  const handleInputChange = (e) => {
+    setIntialState.cardNumber = e.target.value
+    console.log(e.target.value)
   }
 
   const handleCardInputBlur = useCallback(() => {

@@ -1,7 +1,7 @@
 import "./Form.scss";
 
 const Form = (props) => {
-  const { onCardInputFocus, handleCardInputBlur } = props
+  const { onCardInputFocus, handleCardInputBlur, handleChange } = props
   return (
     <div className="form">
       <div className="wrapper">
@@ -18,7 +18,7 @@ const Form = (props) => {
             className="card-number-input input"
             autoComplete="off"
             ref={null}
-            onChange={null}
+            onChange={handleChange}
             onFocus={(e) => onCardInputFocus(e, 'cardNumber')}
             onBlur={handleCardInputBlur}
             value={null}
@@ -34,15 +34,15 @@ const Form = (props) => {
             className="form-name-input input"
             autoComplete="off"
             name="cardHolder"
-            onChange={null}
+            onChange={handleChange}
             ref={null}
             onFocus={(e) => onCardInputFocus(e, 'cardHolder')}
             onBlur={handleCardInputBlur}
           />
         </div>
         <div className="form-input">
-          <div class="form-input-group-row row">
-            <div class="form-input-group-column-date-month column">
+          <div className="form-input-group-row row">
+            <div className="form-input-group-column-date-month column">
               <label
                 htmlFor="cardMonthLabel"
                 className="form-month-input-label label"
@@ -53,7 +53,7 @@ const Form = (props) => {
                 className="card-mounth-select select"
                 value={null}
                 name="cardDateRef"
-                onChange={null}
+                onChange={handleChange}
                 ref={null}
                 onFocus={(e) => onCardInputFocus(e, 'cardDateRef')}
                 onBlur={handleCardInputBlur}
@@ -69,7 +69,7 @@ const Form = (props) => {
                 ))}
               </select>
             </div>
-            <div class="form-input-group-column-date-year column">
+            <div className="form-input-group-column-date-year column">
             <label
                 htmlFor="cardMonthLabel"
                 className="form-year-input-label label"
@@ -80,7 +80,7 @@ const Form = (props) => {
                 name="cardDateRef"
                 className="card-year-select select"
                 value={null}
-                onChange={null}
+                onChange={handleChange}
                 onFocus={(e) => onCardInputFocus(e, 'cardDateRef')}
                 onBlur={handleCardInputBlur}
               >
@@ -95,7 +95,7 @@ const Form = (props) => {
                 ))}
               </select>
               </div>
-            <div class="form-input-column-cvv column">
+            <div className="form-input-column-cvv column">
               <label htmlFor="cardCvv" className="form-cvv-label label">
                 CVV
               </label>
@@ -105,7 +105,7 @@ const Form = (props) => {
                 maxLength="4"
                 autoComplete="off"
                 name="cardCvv"
-                onChange={null}
+                onChange={handleChange}
                 onFocus={(e) => onCardInputFocus(e, 'cardCvv')}
                 onBlur={handleCardInputBlur}
                 ref={null}
